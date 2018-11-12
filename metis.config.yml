@@ -4,4 +4,4 @@ jobs:
   - job_id: 503061e8-6bea-4b8d-99b8-c6d1e7939834
     language: python
     name: activity_classifier
-    entrypoint: activity_classifier_main.py
+    entrypoint: activity_classifier.py
