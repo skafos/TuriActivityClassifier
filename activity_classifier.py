@@ -27,4 +27,4 @@ ska.log("Evaluating the activity classifier model", labels = ['acitivity_classif
 # Evaluate the model and save the results into a dictionary
 metrics = model.evaluate(test)
 
-ska.log(f"Accuracy metrics from the model{metrics['accuracy']}", labels = ['activity_classifier'])
+ska.log(f"Accuracy metrics from the model: {metrics['accuracy']}", labels = ['activity_classifier'])
