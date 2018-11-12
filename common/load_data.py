@@ -1,9 +1,10 @@
 import turicreate as tc
 from s3fs.core import S3FileSystem
 import pandas as pd
-from skafossdk import *
+#from skafossdk import Skafos
 
-ska = Skafos()
+#ska = Skafos()
+
 
 def find_label_for_containing_interval(intervals, index):
     containing_interval = intervals[:, 0][(intervals[:, 1] <= index) & (index <= intervals[:, 2])]
@@ -74,7 +75,7 @@ class ActivityData:
             sf['activity_id'] = sf['id'].apply(lambda x: find_label_for_containing_interval(exp_labels, x))
             sf = sf.remove_columns(['id'])
             files_read += 1
-            ska.report("Files Read", y = files_read, y_label = "Count")
+            #ska.report("Files Read", y = files_read, y_label = "Count")
             data = data.append(sf)
 
         return data
