@@ -8,7 +8,7 @@ import sys
 ska = Skafos() # initialize Skafos
 activity_data = ActivityData() # load data loading class
 
-# don't use GPU
+# don't use GPU for now
 tc.config.set_num_gpus(0)
 
 # get the data
