@@ -1,9 +1,3 @@
 ## Turi Create Activity Classifier
 
-Base code for running a Turi Create Activity Classifier. 
-
-TODOs: 
-
-* Break into multiple files
-* Skafosify it
-* Generate or re-partition so we have new data for scoring.  
+This example is based off of an example provided in the TuriCreate docs. https://apple.github.io/turicreate/docs/userguide/activity_classifier/
