@@ -9,11 +9,12 @@ import sys
 
 tc.config.set_num_gpus(0)
 
+ska = Skafos()
+
 python_version = sys.version_info[0]
 
 ska.log(f"Python Version: {python_version}", labels = ['activity_classifier'])
 
-ska = Skafos()
 
 # Read in input data and convert to SFrame for modeling
 # https://apple.github.io/turicreate/docs/userguide/activity_classifier/data-preparation.html
