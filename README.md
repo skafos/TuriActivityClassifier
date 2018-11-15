@@ -13,7 +13,6 @@ Thanks to [Viktor Maly's 4-part article Run or Walk](https://towardsdatascience.
 - `activity.model` & `activity.mlmodel` - A pre-trained TuriCreate model and CoreML model.
 - `activity_classifier.ipynb` - A Jupyter Notebook containing the same code as 'activity_classifier'
 
-- A support `/common/load_data.py` module that does some initital data cleaning/ prep.
 
 ## What do I do with it?
 - If you want to use this model in your app to detect activities such as standing, walking, running, standing up, sitting down and laying down, download the model and incorporate it into your model.
