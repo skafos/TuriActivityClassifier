@@ -9,7 +9,7 @@ The example included in this repository is an activity classifier running on Ska
 :-------------------------:|:-------------------------:
 ![alt text](https://cdn-images-1.medium.com/max/1120/1*vUB5BP_Fs09Add2P5QV16Q.png "Logo Title Text 1")  |  ![alt_text](https://cdn-images-1.medium.com/max/1120/1*ZXXlUT8jOuYJw6mpGCJEJQ.png "Logo Title Text 2")
  
- For a more in-depth explanation of the underlying data, and these images, check out Viktor Maly's 4-part article Run or Walk.
+Thanks to [Viktor Maly's 4-part article Run or Walk](https://towardsdatascience.com/run-or-walk-detecting-user-activity-with-machine-learning-and-core-ml-part-1-9658c0dcdd90) for the images.
   
 ## What can you find in this repo?
 - `activity_classifer.py` - The main executable that trains the activitiy classifier.
