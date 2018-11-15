@@ -6,11 +6,12 @@ The example included in this repository is an activity classifier running on Ska
   
   See more at **https://apple.github.io/turicreate/docs/userguide/activity_classifier/**.
   
-This repo's main executable is `activity_classifier.py`. This script:
-  - Loads data from a public S3 bucket (see `/common/load_data.py`)
-  - Splits the data into training and testing
-  - Builds the activity classifier using Turi Create's `tc.activity_classifier` function
-  - Evaluates the model
+## What can you find in this repo?
+- The main executable 'activity_classifier.py' that trains the activitiy classifier.
+- The saved TuriCreate model and CoreML model.
+- A Jupyter Notebook containing the same code as 'activity_classifier'
+- A support `/common/load_data.py` module that does some initital data cleaning/ prep.
+
   
 To try this out:
   - Fork this repo
