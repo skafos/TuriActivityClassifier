@@ -20,7 +20,8 @@ The example included in this repository is an activity classifier running on Ska
 
 
 ## How do I integrate my own data?
-The data used to tran this model looks like the following ...
+The data used to tran this model looks like the following
+
 |    |   Experiment | Activity   |   Accelerometer_X |   Accelerometer_Y |   Accelerometer_Z |   Gyroscope_X |   Gyroscope_Y |   Gyroscope_Z |
 |---:|-------------:|:-----------|------------------:|------------------:|------------------:|--------------:|--------------:|--------------:|
 |  0 |            1 | standing   |           1.02083 |         -0.125    |          0.105556 |  -0.00274889  |  -0.00427606  |    0.00274889 |
@@ -29,7 +30,7 @@ The data used to tran this model looks like the following ...
 |  3 |            1 | standing   |           1.01667 |         -0.125    |          0.108333 |   0.011301    |  -0.0018326   |   -0.00641409 |
 |  4 |            1 | standing   |           1.01806 |         -0.127778 |          0.108333 |   0.0109956   |  -0.00152716  |   -0.00488692 |
 
-...
+### ...
 
 |        |   Experiment | Activity          |   Accelerometer_X |   Accelerometer_Y |   Accelerometer_Z |   Gyroscope_X |   Gyroscope_Y |   Gyroscope_Z |
 |-------:|-------------:|:------------------|------------------:|------------------:|------------------:|--------------:|--------------:|--------------:|
