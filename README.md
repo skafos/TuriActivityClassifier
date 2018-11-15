@@ -22,7 +22,11 @@ Thanks to [Viktor Maly's 4-part article Run or Walk](https://towardsdatascience.
 
 
 ## How do I integrate my own data?
-The data used to tran this model looks like the following. There are 6 measurements, 3 axes collected from an accelerometer and 3 axes collected from a Gyroscope. The measurements are associated with an 'Experiment' and an 'Activity'. In general, so long as you can collect the 3 dimensions from each sensor and associate them with an activity and the "experiment" of that activity, you can pre-train the model on any activity you would like (jumping, throwing, falling).
+The data used to tran this model looks like the following:
+- There are 6 measurements, 3 axes collected from an accelerometer and 3 axes collected from a Gyroscope.
+- The measurements are associated with an 'Experiment' and an 'Activity'.
+
+In general, so long as you can collect the 3 dimensions from each sensor and associate them with an activity and the "experiment" of that activity, you can pre-train the model on any activity you would like (jumping, throwing, falling).
 
 |    |   Experiment | Activity   |   Accelerometer_X |   Accelerometer_Y |   Accelerometer_Z |   Gyroscope_X |   Gyroscope_Y |   Gyroscope_Z |
 |---:|-------------:|:-----------|------------------:|------------------:|------------------:|--------------:|--------------:|--------------:|
