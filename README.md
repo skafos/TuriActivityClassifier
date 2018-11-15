@@ -7,7 +7,7 @@ The example included in this repository is an activity classifier running on Ska
   
   Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![alt text](https://cdn-images-1.medium.com/max/1120/1*vUB5BP_Fs09Add2P5QV16Q.png "Logo Title Text 1")  |  ![alt_text](https://cdn-images-1.medium.com/max/1120/1*ZXXlUT8jOuYJw6mpGCJEJQ.png "Logo Title Text 2)
+![alt text](https://cdn-images-1.medium.com/max/1120/1*vUB5BP_Fs09Add2P5QV16Q.png "Logo Title Text 1")  |  ![alt_text](https://cdn-images-1.medium.com/max/1120/1*ZXXlUT8jOuYJw6mpGCJEJQ.png "Logo Title Text 2")
   
   See more at **https://apple.github.io/turicreate/docs/userguide/activity_classifier/**.
   
