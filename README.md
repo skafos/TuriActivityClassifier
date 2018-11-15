@@ -20,7 +20,7 @@ Thanks to [Viktor Maly's 4-part article Run or Walk](https://towardsdatascience.
 
 
 ## How do I integrate my own data?
-The data used to tran this model looks like the following
+The data used to tran this model looks like the following. You can either use this model as a pre-trained model and make predictions, or you can re-train the model using your own data. For example, if you had different activities that you wanted to classify, like jumping, throwing, and falling.
 
 |    |   Experiment | Activity   |   Accelerometer_X |   Accelerometer_Y |   Accelerometer_Z |   Gyroscope_X |   Gyroscope_Y |   Gyroscope_Z |
 |---:|-------------:|:-----------|------------------:|------------------:|------------------:|--------------:|--------------:|--------------:|
