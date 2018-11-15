@@ -5,7 +5,7 @@ The example included in this repository is an activity classifier running on Ska
   *"Activity classification is the task of identifying a pre-defined set of physical actions using motion-sensory inputs. Such sensors include accelerometers, gyroscopes, thermostats, and more found in most handheld devices today."*
   
   
-  Solarized dark             |  Solarized Ocean
+  Walking             |  Running
 :-------------------------:|:-------------------------:
 ![alt text](https://cdn-images-1.medium.com/max/1120/1*vUB5BP_Fs09Add2P5QV16Q.png "Logo Title Text 1")  |  ![alt_text](https://cdn-images-1.medium.com/max/1120/1*ZXXlUT8jOuYJw6mpGCJEJQ.png "Logo Title Text 2")
   
