@@ -1,4 +1,4 @@
-## Turi Create Activity Classifier on Skafos
+# Turi Create Activity Classifier on Skafos
 
 The example included in this repository is an activity classifier running on Skafos:
 
