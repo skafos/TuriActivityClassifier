@@ -15,9 +15,14 @@ Thanks to [Viktor Maly's 4-part article Run or Walk](https://towardsdatascience.
 
 - A support `/common/load_data.py` module that does some initital data cleaning/ prep.
 
+## What do I do with it?
+- If you want to use this model in your app to detect activities such as standing, walking, running, standing up, sitting down and laying down, download the model and incorporate it into your model.
+- If you want to train the model yourself, sign up for a Skafos project, follow these steps and watch it train.
+- If you want to train the model on different data, take a look below.
+
 
 ## How do I integrate my own data?
-The data used to tran this model looks like the following. You can either use this model as a pre-trained model and make predictions, or you can re-train the model using your own data. For example, if you had different activities that you wanted to classify, like jumping, throwing, and falling.
+The data used to tran this model looks like the following. There are 6 measurements, 3 axes collected from an accelerometer and 3 axes collected from a Gyroscope. The measurements are associated with an 'Experiment' and an 'Activity'. In general, so long as you can collect the 3 dimensions from each sensor and associate them with an activity and the "experiment" of that activity, you can pre-train the model on any activity you would like (jumping, throwing, falling).
 
 |    |   Experiment | Activity   |   Accelerometer_X |   Accelerometer_Y |   Accelerometer_Z |   Gyroscope_X |   Gyroscope_Y |   Gyroscope_Z |
 |---:|-------------:|:-----------|------------------:|------------------:|------------------:|--------------:|--------------:|--------------:|
