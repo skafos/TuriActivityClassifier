@@ -2,18 +2,20 @@
 # Based on example from https://apple.github.io/turicreate/docs/userguide/activity_classifier/
 import turicreate as tc
 from skafossdk import *
-from common.load_data import ActivityData
+#from common.load_data import ActivityData
 import sys
+import pandas as pd
 
 ska = Skafos() # initialize Skafos
-activity_data = ActivityData() # load data loading class
+#activity_data = ActivityData() # load data loading class
+ska.log("Grabbing the data", labels = ['activity_classifier'])
+data = pd.read_csv("./activity_data.csv")
 
 # don't use GPU for now
 tc.config.set_num_gpus(0)
 
 # get the data
-ska.log("Grabbing the data from the public S3 bucket", labels = ['activity_classifier'])
-data = activity_data.get_data()
+#ska.log("Grabbing the data from the public S3 bucket", labels = ['activity_classifier'])
 
 #Train/test split for modeling
 ska.log("Splitting the data for modeling", labels = ["activity_classifier"])
