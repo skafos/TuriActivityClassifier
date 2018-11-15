@@ -7,9 +7,10 @@ The example included in this repository is an activity classifier running on Ska
   See more at **https://apple.github.io/turicreate/docs/userguide/activity_classifier/**.
   
 ## What can you find in this repo?
-- The main executable 'activity_classifier.py' that trains the activitiy classifier.
-- The saved TuriCreate model and CoreML model.
-- A Jupyter Notebook containing the same code as 'activity_classifier'
+- `activity_classifer.py` - The main executable that trains the activitiy classifier.
+- `activity.model` & `activity.mlmodel` - A pre-trained TuriCreate model and CoreML model.
+- `activity_classifier.ipynb` - A Jupyter Notebook containing the same code as 'activity_classifier'
+
 - A support `/common/load_data.py` module that does some initital data cleaning/ prep.
 
   
