@@ -1,9 +1,6 @@
 # Turi Create Activity Classifier on Skafos
 
-The example included in this repository is an activity classifier running on Skafos:
-
-  *"Activity classification is the task of identifying a pre-defined set of physical actions using motion-sensory inputs. Such sensors include accelerometers, gyroscopes, thermostats, and more found in most handheld devices today."*
-  
+The example included in this repository is an activity classifier running on Skafos. The model was trained on the open source HAPT dataset. 
   
   Walking             |  Running
 :-------------------------:|:-------------------------:
