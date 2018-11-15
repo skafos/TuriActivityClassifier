@@ -14,7 +14,7 @@ The example included in this repository is an activity classifier running on Ska
 - A support `/common/load_data.py` module that does some initital data cleaning/ prep.
 
   
-To try this out:
+### To try this out:
   - Fork this repo
   - Sign up for a Skafos login
   - Adapt the config files
