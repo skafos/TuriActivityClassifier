@@ -18,6 +18,10 @@ The example included in this repository is an activity classifier running on Ska
 
 - A support `/common/load_data.py` module that does some initital data cleaning/ prep.
 
+
+## How do I integrate my own data?
+
+
   
 ### To try this out:
   - Fork this repo
