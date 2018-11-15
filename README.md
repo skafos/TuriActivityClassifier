@@ -40,7 +40,7 @@ The data used to tran this model looks like the following
 | 748404 |           61 | climbing_upstairs |          0.770833 |         -0.2875   |        -0.0986111 |       1.32619 |      0.846659 |    -0.202502  |
 | 748405 |           61 | climbing_upstairs |          0.718056 |         -0.268056 |        -0.0555556 |       1.45875 |      0.783129 |    -0.0736093 |
 
-
+To find out more about how this data was generated, take a look at the following [link](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). To see the data being generated, take a look at this [video](https://www.youtube.com/watch?v=XOEN9W05_4A).
   
 ### To try this out:
   - Fork this repo
