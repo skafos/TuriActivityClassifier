@@ -51,13 +51,13 @@ def compress_model(coreml_model_name):
 def skafos_save_model(skafos, model_name, compressed_model, tags = ['latest'], permissions = "private"):
 	# try saving the model
 	try:
-		res = skafos.engine.save_model(coreml_model_name, compressed_model, tags, permissions)
+		res = skafos.engine.save_model(model_name, compressed_model, tags, permissions)
 		print(res.result(), flush=True)
 	except Exception as err:
 		# if we get an error, try again
 		print(f"Unable to save the model = {err}, trying again ...")
 		try:
-			res = skafos.engine.save_model(coreml_model_name, compressed_model, tags, permissions)
+			res = skafos.engine.save_model(model_name, compressed_model, tags, permissions)
 			print(res.result(), flush=True)
 		# if after 2 tries it still won't save, give up and return the error
 		except Exception as err2:
