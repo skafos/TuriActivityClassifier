@@ -1,5 +1,6 @@
 import gzip
 import os
+from time import sleep
 
 
 '''
@@ -33,7 +34,7 @@ def compress_model(coreml_model_name):
 	Takes as input the name of the model saved
 	Returns a compressed model to be saved to Skafos
 	'''
-	time.sleep(10) # wait for full-model to be written to file
+	sleep(10) # wait for full-model to be written to file
 
 	# load up the model written to file
 	mc = load_mlmodel(coreml_model_name)
