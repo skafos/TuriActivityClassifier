@@ -5,7 +5,7 @@ from skafossdk import *
 import sys
 import pandas as pd
 from common.load_data import ActivityData
-from common.save_models import *
+import common.save_models as sm
 
 
 ska = Skafos() # initialize Skafos
@@ -15,7 +15,6 @@ ska.log("Grabbing the data", labels = ['activity_classifier'])
 # load data loading class
 activity_data = ActivityData()
 data = activity_data.get_data()
-
 
 # don't use GPU for now
 tc.config.set_num_gpus(0)
