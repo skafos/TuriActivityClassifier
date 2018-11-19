@@ -42,7 +42,7 @@ coreml_model_name = "activity_classifier.mlmodel"
 res = model.export_coreml(coreml_model_name)
 
 # compress the model
-compressed_model_name, compressed_model = compress_model(coreml_model_name)
+compressed_model_name, compressed_model = sm.compress_model(coreml_model_name)
 
 # save to Skafos
 sm.skafos_save_model(skafos = ska, model_name = compressed_model_name,
