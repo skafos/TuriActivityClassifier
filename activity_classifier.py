@@ -37,6 +37,7 @@ metrics = model.evaluate(test)
 
 
 ska.log("Saving the model", labels = ['activity_classifier'])
+
 # export to coreml
 coreml_model_name = "activity_classifier.mlmodel"
 res = model.export_coreml(coreml_model_name)
