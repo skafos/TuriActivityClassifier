@@ -32,8 +32,8 @@ model = tc.activity_classifier.create(train, session_id='Experiment', target='Ac
 
 
 # Evaluate the model and save the results into a dictionary
-ska.log("Evaluating the activity classifier model", labels = ['acitivity_classifier'])
-metrics = model.evaluate(test)
+#ska.log("Evaluating the activity classifier model", labels = ['acitivity_classifier'])
+#metrics = model.evaluate(test)
 
 
 ska.log("Saving the model", labels = ['activity_classifier'])
