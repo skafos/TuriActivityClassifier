@@ -17,7 +17,7 @@ activity_data = ActivityData()
 data = activity_data.get_data()
 
 # don't use GPU for now
-tc.config.set_num_gpus(0)
+#tc.config.set_num_gpus(0)
 
 # get the data
 ska.log("Grabbing the data from the public S3 bucket", labels = ['activity_classifier'])
