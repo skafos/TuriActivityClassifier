@@ -12,6 +12,7 @@ Thanks to [Viktor Malyi's 4-part article Run or Walk](https://towardsdatascience
 - `activity_classifer.py` - The main executable that trains the activitiy classifier.
 - `activity.model` & `activity.mlmodel` - A pre-trained TuriCreate model and CoreML model.
 - `activity_classifier.ipynb` - A Jupyter Notebook containing the same code as 'activity_classifier'
+- `Activity_Data_Integration_Example.ipynb` - A Jupyter Notebook containing an example of how to get your own data working in the TuriCreate framework.
 - `/models` - a directory that contains a saved TuriCreate model (`.model`) and a saved CoreML model (`.mlmodel`)
 
 
