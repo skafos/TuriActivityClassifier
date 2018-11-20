@@ -12,6 +12,7 @@ Thanks to [Viktor Maly's 4-part article Run or Walk](https://towardsdatascience.
 - `activity_classifer.py` - The main executable that trains the activitiy classifier.
 - `activity.model` & `activity.mlmodel` - A pre-trained TuriCreate model and CoreML model.
 - `activity_classifier.ipynb` - A Jupyter Notebook containing the same code as 'activity_classifier'
+- `/models` - a directory that contains a saved TuriCreate model (`.model`) and a saved CoreML model (`.mlmodel`)
 
 
 ## What do I do with it?
@@ -25,7 +26,7 @@ The data used to tran this model looks like the following:
 - There are 6 measurements, 3 axes collected from an accelerometer and 3 axes collected from a Gyroscope.
 - The measurements are associated with an 'Experiment' and an 'Activity'.
 
-In general, so long as you can collect the 3 dimensions from each sensor and associate them with an activity and the "experiment" of that activity, you can pre-train the model on any activity you would like (jumping, throwing, falling).
+In general, so long as you can collect the 3 dimensions from each sensor and associate them with an activity and the "experiment" of that activity, you can pre-train the model on any activity you would like (jumping, throwing, falling). "Experiments" are generally around 50 samples of activity measurements tagged with whatever activity was occuring during that time segment. 
 
 |    |   Experiment | Activity   |   Accelerometer_X |   Accelerometer_Y |   Accelerometer_Z |   Gyroscope_X |   Gyroscope_Y |   Gyroscope_Z |
 |---:|-------------:|:-----------|------------------:|------------------:|------------------:|--------------:|--------------:|--------------:|
