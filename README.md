@@ -52,9 +52,8 @@ In general, so long as you can collect the 3 dimensions from each sensor and ass
 - If your app doesn't already collect motion data, check out [this app](https://itunes.apple.com/us/app/sensor-kinetics/id579040333?mt=8) that allows you to mess around with the gyroscope and accelerometer on your iPhone.
 
 ## How do I integrate my own data?
-- In Viktor Malyi's article mentioned above, he uploaded his own running and walking data to Kaggle. If we were to incorporate that into our training model, we could change the code to do look like the following. He collected data at 50Hz. "After experimenting with several values I identified 50Hz as an optimal sensor update frequency for the type of activities I was going to record."
-
-- To see how we took Viktor's data and formatted it such that TuriCreate could train a model over his data, check out the Activity_Data_Integration_Example.ipynb notebook.
+- In Viktor Malyi's article mentioned above, he uploaded his own running and walking data to Kaggle. 
+- To see how we took Viktor's data and formatted it such that TuriCreate could train a model over his data, check out this repo's [Activity_Data_Integration_Example.ipynb](https://github.com/griffinwalkerMM/TuriActivityClassifier/blob/master/Activity_Data_Integration_Example.ipynb) notebook.
 
 ### To try this out:
   - Fork this repo
