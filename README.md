@@ -21,7 +21,7 @@ Thanks to [Viktor Maly's 4-part article Run or Walk](https://towardsdatascience.
 - If you want to train the model on different data, take a look below.
 
 
-## How do I integrate my own data?
+## The Data
 The data used to tran this model looks like the following:
 - There are 6 measurements, 3 axes collected from an accelerometer and 3 axes collected from a Gyroscope.
 - The measurements are associated with an 'Experiment' and an 'Activity'.
@@ -50,8 +50,14 @@ In general, so long as you can collect the 3 dimensions from each sensor and ass
 - To see the data being generated, take a look at this [video](https://www.youtube.com/watch?v=XOEN9W05_4A).
 - If your app doesn't already collect motion data, check out [this app](https://itunes.apple.com/us/app/sensor-kinetics/id579040333?mt=8) that allows you to mess around with the gyroscope and accelerometer on your iPhone.
 
+## How do I integrate my own data?
+- In Viktor Malyi's article mentioned above, he uploaded his own running and walking data to Kaggle. If we were to incorporate that into our training model, we could change the code to do look like the following. He collected data at 50Hz. "After experimenting with several values I identified 50Hz as an optimal sensor update frequency for the type of activities I was going to record."
+
+- To see how we took Viktor's data and formatted it such that TuriCreate could train a model over his data, check out the Activity_Data_Integration_Example.ipynb notebook.
+
 ### To try this out:
   - Fork this repo
   - Sign up for a Skafos login
   - Adapt the config files
   - `git push skafos`
+
