@@ -62,7 +62,7 @@ Out of the box, Turi Create gives a great,easy implementation of an Activity Cla
 
 - For example, both Viktor Malyi's data and the HAPT data set in the original example sampled data from a given experiment/session at a rate of 50 Hz. The example used a `prediction_window` of 50. What does this mean?
 
-*... if we want to produce a prediction every 5 seconds, and the sensors are sampled at 50Hz - we would set the prediction_window to 250 (5 sec * 50 samples per second)... Since we have created the model with samples taken at 50Hz and set the prediction_window to 50, we will get one prediction per second. "*.
+*" ... if we want to produce a prediction every 5 seconds, and the sensors are sampled at 50Hz - we would set the prediction_window to 250 (5 sec * 50 samples per second)... Since we have created the model with samples taken at 50Hz and set the prediction_window to 50, we will get one prediction per second. "*.
 
 One can play around with the prediction window to see how it changes model output but also it may have to be adjusted depending on the frequency at which you are sampling your activity data. 
 
