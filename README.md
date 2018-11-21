@@ -55,6 +55,13 @@ In general, so long as you can collect the 3 dimensions from each sensor and ass
 - In Viktor Malyi's article mentioned above, he uploaded his own running and walking data to Kaggle. 
 - To see how we took Viktor's data and formatted it such that TuriCreate could train a model over his data, check out this repo's [Activity_Data_Integration_Example.ipynb](https://github.com/griffinwalkerMM/TuriActivityClassifier/blob/master/Activity_Data_Integration_Example.ipynb) notebook.
 
+## Going beyond the TuriCreate example
+Out of the box, Turi Create gives a great,easy implementation of an Activity Classifier. To go beyond this and make your classifier more sophisticated, Turi Create has some [really great documentation](https://apple.github.io/turicreate/docs/userguide/activity_classifier/).
+
+- For example, both Viktor Malyi's data and the HAPT data set in the original example sampled data from a given experiment/session at a rate of 50 Hz. The example used a `prediction_window` of 50. What does this mean?
+
+*"""if we want to produce a prediction every 5 seconds, and the sensors are sampled at 50Hz - we would set the prediction_window to 250 (5 sec * 50 samples per second)."""*
+
 ### To try this out:
   - Fork this repo
   - Sign up for a Skafos login
