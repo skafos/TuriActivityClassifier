@@ -1,8 +1,8 @@
 import turicreate as tc
 from s3fs.core import S3FileSystem
 import pandas as pd
-#from skafossdk import *
-#ska = Skafos()
+from skafossdk import *
+ska = Skafos()
 
 
 def find_label_for_containing_interval(intervals, index):
