@@ -1,6 +1,6 @@
 # Turi Create Activity Classifier on Skafos
 
-The example included in this repository is an activity classifier running on Skafos. The model was trained on the open source HAPT dataset. 
+The example included in this repository is an activity classifier running on Skafos taken from a [Turi Create example](https://apple.github.io/turicreate/docs/userguide/activity_classifier/). The model was trained on the open source HAPT dataset. To learn more about how this model works checkout [Turi Creates documentation](https://apple.github.io/turicreate/docs/userguide/activity_classifier/how-it-works.html).
   
   Walking             |  Running
 :-------------------------:|:-------------------------:
