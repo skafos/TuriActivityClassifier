@@ -17,7 +17,7 @@ Thanks to [Viktor Malyi's 4-part article Run or Walk](https://towardsdatascience
 
 
 ## What do I do with it?
-- If you want to use this model in your app to detect activities such as standing, walking, running, standing up, sitting down and laying down, download the model and incorporate it into your model.
+- If you want to use this model in your app to detect activities such as standing, walking, running, standing up, sitting down and laying down, download the model and incorporate it into your app.
 - If you want to train the model yourself, sign up for a Skafos project, follow these steps and watch it train.
 - If you want to train the model on different data, take a look below.
 
