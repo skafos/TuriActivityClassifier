@@ -1,0 +1,7 @@
+project_token: <insert project_token here>
+name: TuriActivityClassifier
+jobs:
+  - job_id: <create and insert job id here>
+    language: python
+    name: activity_classifier
+    entrypoint: activity_classifier.py
