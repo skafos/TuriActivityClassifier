@@ -14,9 +14,17 @@ def find_label_for_containing_interval(intervals, index):
 
 class ActivityData:
     '''
-        This class loads and performs the basic data loading and cleaning
-        necessary for passing off a clean data frame to the activity classifier
-        function in acitivity_classifer.py
+        This class is a restructured version of the data preparation code provided by Turi Create here:
+         https://apple.github.io/turicreate/docs/userguide/activity_classifier/data-preparation.html
+
+        It takes the HAPT example data and formats it in a way that it can be used by
+        the tc.activity_classifier class of functions.
+
+        Usage: 
+            activity_data = ActivityData()
+            data = activity_data.get_data()
+
+        see activity_classifier.py
     '''
     def __init__(self):
         self.data_dir = "skafos.example.data/HaptDataSet/RawData/";
@@ -85,12 +93,16 @@ class ActivityData:
         return data
 
     def get_data(self):
-        # get the files
+        # get the list of all files from the S3 directory
         files = self.find_files()
-        # build the data frame
+        # build the data frame by ingesting and reformatting the data in each file
         df = self.build_df(files)
-         # filter out acitivities we don't care about
+
+        # The target_map defined above only specifies activity labels 1-6
+        # in the provided data. The remaining labels are removed in the code below.
+        # The full set of labels can be found in HaptDataSet/activity_labels.txt
         data = df.filter_by(list(self.target_map.keys()), 'activity_id')
+        
         # translate the acitivity id column
         data['activity'] = data['activity_id'].apply(lambda x: self.target_map[x])
         data = data.remove_column('activity_id') # drop activity id

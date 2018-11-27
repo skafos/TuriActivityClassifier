@@ -4,14 +4,16 @@ from time import sleep
 
 
 '''
-from common.save_model import *
+The below are helper functions used to save Turi Create and CoreML models
+to Skafos
 
-When you are ready to save your model, your workflow 
-should look like the following:
+Usage: 
+
+from common.save_model import *
 
 # export to coreml
 coreml_model_name = "recommender.mlmodel"
-res = model.export_coreml(coreml_model_name)
+res = model.export_coreml(coreml_model_name) # turi create's built in method
 
 # compress the model
 compressed_model_name, compressed_model = compress_model(coreml_model_name)

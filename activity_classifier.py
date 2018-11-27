@@ -14,12 +14,10 @@ ska = Skafos() # initialize Skafos
 ska.log("Grabbing the data", labels = ['activity_classifier'])
 # load data loading class
 activity_data = ActivityData()
+# get_data() reads in Input Data from a public S3 bucket and follows
+# the transformations outlined in https://apple.github.io/turicreate/docs/userguide/activity_classifier/data-preparation.html
 data = activity_data.get_data()
 
-# don't use GPU for now
-#tc.config.set_num_gpus(0)
-
-# get the data
 ska.log("Grabbing the data from the public S3 bucket", labels = ['activity_classifier'])
 
 #Train/test split for modeling
@@ -31,13 +29,12 @@ ska.log("Creating the activity classifier", labels = ["activity_classifier"])
 model = tc.activity_classifier.create(train, session_id='Experiment', target='Activity', prediction_window=50)
 
 
-# Evaluate the model and save the results into a dictionary
+# Evaluate the model 
 ska.log("Evaluating the activity classifier model", labels = ['acitivity_classifier'])
 metrics = model.evaluate(test)
+print(metrics['accuracy'])
 
-ska.log("Saving the model", labels = ['activity_classifier'])
-
-# export to coreml
+# export to coreml using turi create's built in export_coreml method
 coreml_model_name = "activity_classifier.mlmodel"
 res = model.export_coreml(coreml_model_name)
 
