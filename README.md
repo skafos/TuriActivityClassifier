@@ -1,28 +1,17 @@
-# Turi Create Activity Classifier on Skafos
+# Turi Activity Classifier
 
-The example included in this repository is an activity classifier running on Skafos taken from a [Turi Create example](https://apple.github.io/turicreate/docs/userguide/activity_classifier/). The model was trained on the open source HAPT dataset. To learn more about how this model works checkout [Turi Create's documentation](https://apple.github.io/turicreate/docs/userguide/activity_classifier/how-it-works.html).
+_This public repository is designed for use in the Skafos ML delivery platform, which is available at metismachine.com. Use of this repo outside of the Skafos platform is not supported by Metis Machine._
 
+The following repo contains code for training an activity classifier model on Skafos using the [Turi Create framework](https://apple.github.io/turicreate/docs/userguide/activity_classifier/).  The example model was trained on the open source HAPT dataset, and given a sequence of sensor readings from an edge device, will predict the most likely activity (sitting, standing, walking, running, etc).
   
-## What can you find in this repo?
-- `activity_classifer.py` - The main executable that trains the activitiy classifier.
-- `activity.model` & `activity.mlmodel` - A pre-trained TuriCreate model and CoreML model.
-- `activity_classifier.ipynb` - A Jupyter Notebook containing the same code as 'activity_classifier'
-- `Activity_Data_Integration_Example.ipynb` - A Jupyter Notebook containing an example of how to get your own data working in the TuriCreate framework.
-- `/models` - a directory that contains a saved TuriCreate model (`.model`) and a saved CoreML model (`.mlmodel`)
-- `/common` - a directory that contains functions and code called from the main activity classifier script.
+## What is here?
+- `activity_classifier.ipynb` - A Python notebook that trains and saves an activity classifier model to use in your app. Start Here.
+- `Activity_Data_Integration_Example.ipynb` - A Jupyter Notebook containing an example of how to get your own data working in the TuriCreate framework.-  `utilities/` - a directory that contains helper functions used by `activity_classifier.ipynb`.
+-  `advanced_usage/` - a directory that contains additional information about this activity classification model, how to incorporate your own data, advanced usage, and additional example models.
+-  `requirements.txt` - a file describing all required Python dependencies.
 
-
-## How to use this repo?
-1. Use the `.mlmodel` file in your app to classify activities.
-2. Use the provided code and example data to train an activity classifier.
-3. Train an activity classifier on different data.
-  - To see how we took Viktor's data and formatted it such that TuriCreate could train a model over his data, check out this repo's [Activity_Data_Integration_Example.ipynb](https://github.com/griffinwalkerMM/TuriActivityClassifier/blob/master/Activity_Data_Integration_Example.ipynb) notebook.
-  - One can play around with the prediction window to see how it changes model output but also it may have to be adjusted depending on the frequency at which you are sampling your activity data. 
-
-
-
-## The Data
-The data used to train this model is the publicly available [HAPT data set](https://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions). When using the activity_classifier.py to train the model, we use a copy of this data set that has been placed on a public S3 bucket.
+## About the model
+-  The data used to train this model is the publicly available [HAPT data set](https://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions). When using the activity_classifier.py to train the model, we use a copy of this data set that has been placed on a public S3 bucket.
 
 In order to train this model with Turi Create, the HAPT Data set needed to be wrangled into the format shown below. The code to do this was adapted from [Turi Create's example](https://apple.github.io/turicreate/docs/userguide/activity_classifier/data-preparation.html) and can be found [here](https://github.com/griffinwalkerMM/TuriActivityClassifier/blob/master/common/load_data.py).
 
@@ -54,10 +43,11 @@ In general, so long as you can collect the 3 dimensions from each sensor and ass
 
 
 
+## Need Help?
+Please contact us with questions or feedback! Here are two ways:
 
-### To try this out:
-  - Fork this repo
-  - Sign up for a Skafos login
-  - Adapt the config files
-  - `git push skafos`
 
+-  [**Signup for our Slack Channel**](https://metismachine-skafos.slack.com/join/shared_invite/enQtNTAxMzEwOTk2NzA5LThjMmMyY2JkNTkwNDQ1YjgyYjFiY2MyMjRkMzYyM2E4MjUxNTJmYmQyODVhZWM2MjQwMjE5ZGM1Y2YwN2M5ODI)
+-  [**Find us on Reddit**](https://reddit.com/r/skafos) 
+
+Also checkout Turi Create's [**documentation**](https://apple.github.io/turicreate/docs/userguide/activity_classifier/) on activity classification basics.
