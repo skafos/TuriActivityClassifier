@@ -3,15 +3,40 @@ The purpose of this Advanced Usage Guide is to provide additional tooling, tips,
 
 ## Tips And "Gotchas"
 
--  **Training Data**: The training data used for the sentiment classifier consists of raw text from user reviews on Yelp, paired with a sentiment score (1-5). Don't expect the model to predict the topic of text out of the box unless you change the underlying training data.
-    -  **Key Point:** When you train a model, the nature of the training data directly influences the model's ability to make 
-- **Wrangling Sensor Data w/ Turi Create**: 
+-  **Training Data**: The training data used for the activity classifier consists of sensor readings from the accelerometer and gyroscope of a mobile device, paired with a session id (Experiment) and a label (Activity). Don't expect the model to properly classify an activity that it didn't see during the training step.
+    -  **Key Point:** When you train a model, the nature of the training data directly influences the model's ability to make predictions in the wild. 
+- **Wrangling Sensor Data w/ Turi Create**: In order to train this model with Turi Create, the HAPT activity data needed to be wrangled into the format shown below. Learn more about how to do this in [Turi Create's example](https://apple.github.io/turicreate/docs/userguide/activity_classifier/data-preparation.html).
+
+
+|    |   Experiment | Activity   |   Accelerometer_X |   Accelerometer_Y |   Accelerometer_Z |   Gyroscope_X |   Gyroscope_Y |   Gyroscope_Z |
+|---:|-------------:|:-----------|------------------:|------------------:|------------------:|--------------:|--------------:|--------------:|
+|  0 |            1 | standing   |           1.02083 |         -0.125    |          0.105556 |  -0.00274889  |  -0.00427606  |    0.00274889 |
+|  1 |            1 | standing   |           1.025   |         -0.125    |          0.101389 |  -0.000305433 |  -0.00213803  |    0.00610865 |
+|  2 |            1 | standing   |           1.02083 |         -0.125    |          0.104167 |   0.0122173   |   0.000916298 |   -0.00733038 |
+|  3 |            1 | standing   |           1.01667 |         -0.125    |          0.108333 |   0.011301    |  -0.0018326   |   -0.00641409 |
+
+# ...
+
+|        |   Experiment | Activity          |   Accelerometer_X |   Accelerometer_Y |   Accelerometer_Z |   Gyroscope_X |   Gyroscope_Y |   Gyroscope_Z |
+|-------:|-------------:|:------------------|------------------:|------------------:|------------------:|--------------:|--------------:|--------------:|
+| 748401 |           61 | climbing_upstairs |          0.880556 |         -0.390278 |        -0.156944  |       1.1637  |      1.10628  |    -0.374155  |
+| 748402 |           61 | climbing_upstairs |          0.834722 |         -0.358333 |        -0.0986111 |       1.17714 |      1.02381  |    -0.388816  |
+| 748403 |           61 | climbing_upstairs |          0.802778 |         -0.329167 |        -0.104167  |       1.21348 |      0.91813  |    -0.332311  |
+
+-  The general format of this data is that each experiment contains 6 measurements. 3 axes collected from an accelerometer and 3 axes collected from a gyroscope. Each experiment also contains a labeled activity (e.g. walking, running, standing, etc.)
+-  **Collecting Sensor Data**: Sensor data can be collected at different time intervals. The training data set for this example (HAPT), which contains data for different users performing multiple activities, was sampled at 50Hz, or 50 times per second. It is **VITAL** that sensor data used to train an activity classifier is sampled at the same frequency throughout.
+-  **Prediction Window**: Depending on your application, or use-case, you may want a model that generates an activity prediction every *N* seconds. Set the `prediction_window` parameter in the model training step to be *N*x*sampling_frequency*. So if you wanted your model to give a prediction every 5 seconds (N) and the sensors are sampled at 50Hz, you would set the prediction window to 250 (5 sec * 50 samples per second).
+-  To see the data being generated, take a look at this [video](https://www.youtube.com/watch?v=XOEN9W05_4A).
+-  If your app doesn't already collect motion data, check out [this app](https://itunes.apple.com/us/app/sensor-kinetics/id579040333?mt=8) that allows you to mess around with the gyroscope and accelerometer on your iPhone.
+
+
+
 
 
 ## Resources
 
--  `text_in_turicreate.ipynb`: Gives some tips on adapting your text classifier to a **NEW** set of data, detailing proper formatting and several helper functions.
--  `spam_classifier.ipynb`: Ready to try something other than sentiment classification? Try out spam classification and wrangle a new external data source. By the end, you will have trained a different text classifier and evaluated the model's performance on a holdout test set.
+-  `activity_data_in_turicreate.ipynb`: Gives some tips on adapting your text classifier to a **NEW** set of data, detailing proper formatting and several helper functions.
+-  To find out more about how this data was generated, take a look at the following [link](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 ## Need Help?
 Didn't find something you need? Confused by something? Need more guidance?
@@ -21,4 +46,4 @@ Please contact us with questions or feedback! Here are two ways:
 -  [**Signup for our Slack Channel**](https://skafosai.slack.com)
 -  [**Find us on Reddit**](https://reddit.com/r/skafos)
 
-Also checkout Turi Create's [**documentation**](https://apple.github.io/turicreate/docs/userguide/text_classifier/) on text classification basics.
+Also checkout Turi Create's [**documentation**](https://apple.github.io/turicreate/docs/userguide/activity_classifier/) on activity classification basics.
