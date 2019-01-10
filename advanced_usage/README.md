@@ -28,10 +28,7 @@ The purpose of this Advanced Usage Guide is to provide additional tooling, tips,
 -  To see an example of data being generated, take a look at this [video](https://www.youtube.com/watch?v=XOEN9W05_4A).
 -  If your app doesn't already collect motion data, check out [this app](https://itunes.apple.com/us/app/sensor-kinetics/id579040333?mt=8) that allows you to mess around with the gyroscope and accelerometer on an iPhone.
 
-
-
 ## Resources
-
 -  `activity_data_in_turicreate.ipynb`: Gives some tips on adapting your text classifier to a **NEW** set of data, detailing proper formatting and several helper functions.
 -  To find out more about how this data was generated, take a look at the following [link](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
