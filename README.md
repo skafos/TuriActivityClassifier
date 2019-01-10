@@ -2,18 +2,17 @@
 
 _This public repository is designed for use in the Skafos ML delivery platform, which is available at metismachine.com. Use of this repo outside of the Skafos platform is not supported by Metis Machine._
 
-The following repo contains code for training an activity classifier model on Skafos using the [Turi Create framework](https://apple.github.io/turicreate/docs/userguide/activity_classifier/).  The example model was trained on the open source HAPT dataset, and given a sequence of sensor readings from an edge device, will predict the most likely activity (sitting, standing, walking, running, etc).
+The following repo contains code for training an activity classifier model on Skafos using the [Turi Create framework](https://apple.github.io/turicreate/docs/userguide/activity_classifier/).  The example model was trained on the open source HAPT dataset, and given a sequence of sensor readings from an edge device, will classify the most likely activity (sitting, standing, walking, running, etc).
   
 ## What is here?
-- `activity_classifier.ipynb` - A Python notebook that trains and saves an activity classifier model to use in your app. Start Here.
-- `Activity_Data_Integration_Example.ipynb` - A Jupyter Notebook containing an example of how to get your own data working in the TuriCreate framework.-  `utilities/` - a directory that contains helper functions used by `activity_classifier.ipynb`.
+-  `activity_classifier.ipynb` - A Python notebook that trains and saves an activity classifier model to use in your app. Start here.
+-  `utilities/` - a directory that contains helper functions used by `activity_classifier.ipynb`.
 -  `advanced_usage/` - a directory that contains additional information about this activity classification model, how to incorporate your own data, advanced usage, and additional example models.
 -  `requirements.txt` - a file describing all required Python dependencies.
 
 ## About the model
--  The data used to train this model is the publicly available [HAPT data set](https://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions). When using the activity_classifier.py to train the model, we use a copy of this data set that has been placed on a public S3 bucket.
-
-In order to train this model with Turi Create, the HAPT Data set needed to be wrangled into the format shown below. The code to do this was adapted from [Turi Create's example](https://apple.github.io/turicreate/docs/userguide/activity_classifier/data-preparation.html) and can be found [here](https://github.com/griffinwalkerMM/TuriActivityClassifier/blob/master/common/load_data.py).
+-  The activity classifier is trained on the publicly available [HAPT data set](https://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions).
+-  In order to train this model with Turi Create, the HAPT Data set needed to be wrangled into the format shown below. The code to do this was adapted from [Turi Create's example](https://apple.github.io/turicreate/docs/userguide/activity_classifier/data-preparation.html) and can be found [here](https://github.com/griffinwalkerMM/TuriActivityClassifier/blob/master/common/load_data.py).
 
 |    |   Experiment | Activity   |   Accelerometer_X |   Accelerometer_Y |   Accelerometer_Z |   Gyroscope_X |   Gyroscope_Y |   Gyroscope_Z |
 |---:|-------------:|:-----------|------------------:|------------------:|------------------:|--------------:|--------------:|--------------:|
