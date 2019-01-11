@@ -11,6 +11,7 @@ lost+found
 .yarnrc
 .conda
 __pycache__
+.idea*
 
 /.ipynb_checkpoints
 /common/__pycache__

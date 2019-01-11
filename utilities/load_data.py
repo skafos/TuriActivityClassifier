@@ -1,8 +1,6 @@
+import pandas as pd
 import turicreate as tc
 from s3fs.core import S3FileSystem
-import pandas as pd
-from skafossdk import *
-ska = Skafos()
 
 
 def find_label_for_containing_interval(intervals, index):
@@ -61,8 +59,7 @@ class ActivityData:
         return files
 
     def build_df(self, files):
-        data = tc.SFrame(); # set an empty data frame that we will append to
-        files_read = 0
+        data = tc.SFrame() # set an empty data frame that we will append to
         for acc_file, gyro_file in files:
             exp_id = int(acc_file.split('_')[1][-2:])
             acc_full_path = "s3://" + acc_file
@@ -87,17 +84,16 @@ class ActivityData:
             sf = sf.add_row_number()
             sf['activity_id'] = sf['id'].apply(lambda x: find_label_for_containing_interval(exp_labels, x))
             sf = sf.remove_columns(['id'])
-            files_read += 1
-            #ska.report("Files Read", y = files_read, y_label = "Count")
             data = data.append(sf)
         return data
 
     def get_data(self):
+        print("Loading data from S3, this may take a minute", flush=True)
         # get the list of all files from the S3 directory
         files = self.find_files()
         # build the data frame by ingesting and reformatting the data in each file
         df = self.build_df(files)
-
+        print("Data loaded from S3, filter down to the required labels.", flush=True)
         # The target_map defined above only specifies activity labels 1-6
         # in the provided data. The remaining labels are removed in the code below.
         # The full set of labels can be found in HaptDataSet/activity_labels.txt
