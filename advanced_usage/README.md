@@ -22,8 +22,13 @@ The purpose of this Advanced Usage Guide is to provide additional tooling, tips,
 | 748402 |           61 | climbing_upstairs |          0.834722 |         -0.358333 |        -0.0986111 |       1.17714 |      1.02381  |    -0.388816  |
 | 748403 |           61 | climbing_upstairs |          0.802778 |         -0.329167 |        -0.104167  |       1.21348 |      0.91813  |    -0.332311  |
 
--  The general format of this data is that each experiment contains 6 measurements. 3 axes collected from an accelerometer and 3 axes collected from a gyroscope. Each experiment maps to a labeled activity (e.g. walking, running, standing, etc.)
--  **Collecting Sensor Data**: Sensor data can be collected at different time intervals. The training data set for this example (HAPT), which contains data for different users performing multiple activities, was sampled at 50Hz, or 50 times per second. It is **VITAL** that sensor data used to train an activity classifier is sampled at the same frequency throughout.
+-  **Sensors**: The general format of this data is that each experiment contains 6 measurements. 3 axes collected from an **accelerometer** and a **gyroscope**. The accelerometer provides changes in mobile device’s velocity along 3 axes, and a gyroscope delivers the rate at which a device rotates around a spatial axis. See the image below:
+
+![Accelerometer and Gyroscope](sensors.png)
+
+
+
+-  **Collecting Sensor Data**: Sensor data can be collected at different time intervals. The training data set for this example (HAPT), which contains data for different users performing multiple activities, was sampled at 50Hz, or 50 times per second. It is **VITAL** that sensor data used to train an activity classifier is sampled at the same frequency throughout. Sensor data that the model is actively attempting to classify must also be at the same sampling frequency.
 -  **Prediction Window**: Depending on your application or use-case you may want a model that generates an activity prediction every *N* seconds. Set the `prediction_window` parameter in the model training step to be *N* x *sampling_frequency*. So if you wanted your model to give a prediction every 5 seconds and the sensors are sampled at 50Hz, you would set the prediction window to 250 ~ (5 sec * 50 samples per second).
 -  To see an example of data being generated, take a look at this [video](https://www.youtube.com/watch?v=XOEN9W05_4A).
 -  If your app doesn't already collect motion data, check out [this app](https://itunes.apple.com/us/app/sensor-kinetics/id579040333?mt=8) that allows you to mess around with the gyroscope and accelerometer on an iPhone.
