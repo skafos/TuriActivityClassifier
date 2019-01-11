@@ -88,11 +88,12 @@ class ActivityData:
         return data
 
     def get_data(self):
+        print("Loading data from S3, this may take a minute", flush=True)
         # get the list of all files from the S3 directory
         files = self.find_files()
         # build the data frame by ingesting and reformatting the data in each file
         df = self.build_df(files)
-
+        print("Data loaded from S3, filter down to the required labels.", flush=True)
         # The target_map defined above only specifies activity labels 1-6
         # in the provided data. The remaining labels are removed in the code below.
         # The full set of labels can be found in HaptDataSet/activity_labels.txt
