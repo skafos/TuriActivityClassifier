@@ -29,7 +29,7 @@ def _install_turicreate(timeout=300, retries=2):
     try:
         import turicreate as tc
         tc.SFrame() # check to see that we can load an empty SFrame
-        print("Turi Create was already installed. It's been saved to the tc variable.", flush=True)
+        print("Turi Create was already installed.", flush=True)
         return tc
     # if that fails, install it
     except:
