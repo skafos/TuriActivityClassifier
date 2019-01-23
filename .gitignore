@@ -12,6 +12,7 @@ lost+found
 .conda
 __pycache__
 .idea*
+.csv*
 
 /.ipynb_checkpoints
 /common/__pycache__
