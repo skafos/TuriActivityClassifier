@@ -32,7 +32,7 @@ The purpose of this Advanced Usage Guide is to provide additional tooling, tips,
 
 ## Resources
 -  `activity_data_in_turicreate.ipynb`: Gives some tips on adapting your text classifier to a **NEW** set of data, detailing proper formatting and several helper functions.
--  If your app doesn't already collect motion data, check out [this app](https://itunes.apple.com/us/app/sensorlog/id388014573?mt=8) that allows you to mess around with a host of sensor data on all iOS devices.
+-  If your app does not already collect motion data, check out [this app](https://itunes.apple.com/us/app/sensorlog/id388014573?mt=8) that allows you to mess around with a host of sensor data on all iOS devices.
 -  To see an example of data being generated, take a look at this [video](https://www.youtube.com/watch?v=XOEN9W05_4A).
 ## Need Help?
 Didn't find something you need? Confused by something? Need more guidance?
