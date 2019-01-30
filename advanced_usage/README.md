@@ -26,13 +26,13 @@ The purpose of this Advanced Usage Guide is to provide additional tooling, tips,
 
 ![Accelerometer and Gyroscope](sensors.png)
 
--  **Collecting Sensor Data**: Sensor data can be collected at different time intervals. The training data set for this example was sampled at 10Hz, or 10 times per second. It is **VITAL** that sensor data used to train an activity classifier is sampled at the same frequency throughout. Sensor data that the model is actively attempting to classify should also be at the same sampling frequency. Read about how we collected data for this example on an [iWatch](). Here's another example of collecting sensor data from an [iPhone](https://towardsdatascience.com/run-or-walk-part-2-collecting-device-motion-data-the-right-way-58a277ff2087). 
+-  **Collecting Sensor Data**: Sensor data can be collected at different time intervals. The training data set for this example was sampled at 10Hz, or 10 times per second. It is **VITAL** that sensor data used to train an activity classifier is sampled at the same frequency throughout. Sensor data that the model is actively attempting to classify should also be at the same sampling frequency. Read about how we collected data for this example on an [Apple Watch](https://medium.com/metis-machine/activity-classification-for-watchos-part-1-542d44388c40). Here's another example of collecting sensor data from an [iPhone](https://towardsdatascience.com/run-or-walk-part-2-collecting-device-motion-data-the-right-way-58a277ff2087). 
 
 -  **Prediction Window**: Depending on your application or use-case you may want a model that generates an activity prediction every *N* seconds. Set the `prediction_window` parameter in the model training step to be *N* x *sampling_frequency*. So if you wanted your model to give a prediction every 5 seconds and the sensors are sampled at 50Hz, you would set the prediction window to 250 ~ (5 sec * 50 samples per second).
 
 ## Resources
 -  `activity_data_in_turicreate.ipynb`: Gives some tips on adapting your text classifier to a **NEW** set of data, detailing proper formatting and several helper functions.
--  If your app does not already collect motion data, check out [this app](https://itunes.apple.com/us/app/sensorlog/id388014573?mt=8) that allows you to mess around with a host of sensor data on all iOS devices.
+-  If your app does not already collect motion data, check out [Sensor Log](https://itunes.apple.com/us/app/sensorlog/id388014573?mt=8) that allows you to mess around with a host of sensor data on all iOS devices.
 -  To see an example of data being generated, take a look at this [video](https://www.youtube.com/watch?v=XOEN9W05_4A).
 ## Need Help?
 Didn't find something you need? Confused by something? Need more guidance?
