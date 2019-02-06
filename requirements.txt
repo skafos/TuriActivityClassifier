@@ -1,6 +1,6 @@
-turicreate==5.1
+skafossdk==1.1.9
+turicreate==5.2.1
 s3fs==0.1.6
 pandas==0.23.4
 numpy==1.15.4
-skafossdk>=1.1.9
-requests
+requests==2.19.1
