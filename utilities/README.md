@@ -4,7 +4,6 @@
 The following modules assist in developing machine learning models on Skafos.
 
 -  `dependencies.py`: a module to help ensure that Python packages are installed correctly in your JLab session.
--  `save_models.py`: a module to help with saving models to Skafos.
 
 ## Need Help?
 Didn't find something you need? Feel free to add other helper modules to this subdirectory as you continue the development of your models.
