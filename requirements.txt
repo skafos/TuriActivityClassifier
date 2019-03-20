@@ -1,3 +1,4 @@
 skafossdk==1.2.1
+mxnet-cu80==1.1.0.post0
 turicreate==5.3.1
 pandas==0.23.4
